@@ -1,7 +1,5 @@
-import logging
 
-
-logging.log(logging.DEBUG, "Setup run")
+import __main__
 
 
 if __name__ == "__main__":
