@@ -1,6 +1,7 @@
 import discord
+import os
 
-token = "NzEyOTk3ODYyMjEyMTA4MzI2.XsZtgw.DlSDW7PoVNYPceFv3i4akmvS0XI"
+token = os.environ.get("token")
 
 
 class Client(discord.Client):
