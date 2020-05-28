@@ -9,16 +9,12 @@ class Client(discord.Client):
         print("Ready.")
 
     async def on_message(self, message):
-        print(message)
-
         if not message.author == self.user:
             await message.channel.send(message.content + "?")
 
         if not message.author == self.user:
             if message.content == "Hello":
-                await message.channel.send("Hello!")
-
-        print("Message sent")
+                await message.channel.send("@{} Hello!".format(message.author))
 
 
 # @client.event
