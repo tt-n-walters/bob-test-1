@@ -9,6 +9,8 @@ class Client(discord.Client):
         print("Ready.")
 
     async def on_message(self, message):
+        print(message.content)
+
         if not message.author == self.user:
             await message.channel.send(message.content + "?")
 
