@@ -12,7 +12,7 @@ class Client(discord.Client):
         print(message)
 
         if not message.author == self.user:
-            await message.channel.send(message.text + "?")
+            await message.channel.send(message.content + "?")
 
         print("Message sent")
 
