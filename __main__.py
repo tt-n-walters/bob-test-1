@@ -14,7 +14,20 @@ class Client(discord.Client):
         if not message.author == self.user:
             await message.channel.send(message.content + "?")
 
+        if not message.author == self.user:
+            if message.content == "Hello":
+                await message.channel.send("Hello!")
+
         print("Message sent")
+
+
+# @client.event
+# async def on_message(message):
+#     if message.author == client.user:
+#         return
+
+#     if message.content.startswith('$hello'):
+#         await message.channel.send('Hello!')
 
 
 Client().run(token)
