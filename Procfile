@@ -1,1 +1,1 @@
-release: python .
+web: python .
